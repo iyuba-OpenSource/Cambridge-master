@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/toolbar"
+        android:layout_width="fill_parent"
+        android:layout_height="?actionBarSize"
+        android:background="?colorPrimary"
+        android:minHeight="?actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:navigationIcon="?homeAsUpIndicator"
+        app:popupTheme="?actionBarPopupTheme" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8"
+        android:background="@mipmap/bg">
+
+        <TextView
+            android:id="@+id/chapter_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:text="Chapter3 The lady in white / 白衣女人"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+    </FrameLayout>
+    <!-- <ImageView
+         android:id="@+id/iv_blank"
+         android:layout_width="match_parent"
+         android:layout_height="0dp"
+         android:layout_weight="8"
+         android:background="@mipmap/bg" />-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="#031f22"
+        android:orientation="horizontal">
+
+        <com.iyuba.camstory.view.CustomTextView
+            android:id="@+id/tv_current_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/seekbar"
+            android:layout_toStartOf="@+id/seekbar"
+            android:text="0:00"
+            android:textColor="#ffffff" />
+
+        <com.iyuba.camstory.view.CustomTextView
+            android:id="@+id/tv_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/seekbar"
+            android:layout_toEndOf="@+id/seekbar"
+            android:text="0:00"
+            android:textColor="#ffffff" />
+
+        <androidx.appcompat.widget.AppCompatSeekBar
+            android:id="@+id/seekbar"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp" />
+
+        <Button
+            android:id="@+id/choose_player"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/choose_player" />
+
+
+        <Button
+            android:id="@+id/backward"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="50dp"
+            android:layout_marginBottom="20dp"
+            android:layout_toLeftOf="@+id/iv_playcontrol"
+            android:background="@drawable/new_bac" />
+
+        <ImageView
+            android:id="@+id/iv_playcontrol"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/new_play" />
+
+        <Button
+            android:id="@+id/speed"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="50dp"
+            android:layout_marginBottom="20dp"
+            android:layout_toRightOf="@+id/iv_playcontrol"
+            android:background="@drawable/new_fast" />
+
+        <TextView
+            android:id="@+id/tv_speed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="18dp"
+            android:layout_marginBottom="20dp"
+            android:text="1.0x"
+            android:textColor="#ffffff"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/ad_layout"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="60dp">
+
+        <ImageView
+            android:id="@+id/iv_web_ad"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:scaleType="fitXY"
+            android:visibility="gone" />
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/ad_view"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="bottom"
+            android:visibility="gone"
+            ads:adSize="BANNER"
+            ads:adUnitId="@string/banner_ad_unit_id" />
+
+        <RelativeLayout
+            android:id="@+id/downloadBtn"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/photoImage"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:scaleType="matrix" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/adtips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:drawableRight="@drawable/close_bg"
+            android:gravity="center_vertical"
+            android:padding="3dp"
+            android:text=" 广告 点击关闭"
+            android:textColor="@android:color/black"
+            android:textSize="10dp" />
+    </RelativeLayout>
+</LinearLayout>

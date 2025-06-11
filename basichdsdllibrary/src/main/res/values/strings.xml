@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">BacisHDsDLLibrary</string>
+
+    <string name="basic_headlines_type">VOA慢速英语:</string>
+    <string name="basic_headlines_title_cn">唐纳德•特朗普总统就职演说最新内容可以学习</string>
+    <string name="basic_headlines_title_en">Last surviving British member of Dambusters returned to Sorpe Dam</string>
+    <string name="basic_headlines_view_count">%1$s人浏览</string>
+    <string name="basic_headlines_watch_count">%1$s人观看</string>
+    <string name="basic_headlines_create_time">2017-01-15</string>
+    <!-- 头条列表的Activity中的Adapter的Item中用到了DescCn字段 -->
+    <string name="basic_headlines_desc_cn">"美国副总统彭斯称，他此次慕尼黑之行，特地带来了总统特朗普的“口信”。
+        “今天，我代表特朗普总统向你们保证：美国强力支持北约，而且将对跨大西洋联盟的承诺坚定不移。”"</string>
+    <string name="basic_headlines_in_date">2017-02-09</string>
+    <string name="basic_headlines_category_name">生活</string>
+
+</resources>

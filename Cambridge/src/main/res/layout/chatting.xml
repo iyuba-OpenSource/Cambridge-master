@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.iyuba.camstory.widget.ResizeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/chat_root"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@mipmap/background"
+    android:focusable="false"
+    android:focusableInTouchMode="false"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:background="@color/camstorygreen" >
+
+        <Button
+            android:id="@+id/messageletterContent_back_btn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/back_button" />
+
+        <TextView
+            android:id="@+id/messagelettercontent_friendname"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text=""
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/messagelettercontent_attention"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/camstory_button_bg_selector"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="@string/social_attention"
+            android:textColor="#ffffff"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/chatting_history_lv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        android:background="@null"
+        android:cacheColorHint="#00000000"
+        android:divider="@null"
+        android:listSelector="@drawable/mm_chat_listitem"
+        android:scrollbars="vertical"
+        android:transcriptMode="alwaysScroll" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/txt_msg_bg"
+        android:orientation="horizontal"
+        android:paddingRight="7.0dp" >
+
+        <Button
+            android:id="@+id/show"
+            android:layout_width="24.0dp"
+            android:layout_height="24.0dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/emotion"
+            android:gravity="center" />
+
+        <EditText
+            android:id="@+id/text_editor"
+            android:layout_width="0.0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="5.0dp"
+            android:layout_marginLeft="7.0dp"
+            android:layout_marginRight="7.0dp"
+            android:layout_marginTop="5.0dp"
+            android:layout_weight="1.0"
+            android:autoText="true"
+            android:background="@drawable/sms_embeded_text_editor_bg"
+            android:capitalize="sentences"
+            android:focusable="true"
+            android:hint="@string/social_input_message"
+            android:imeOptions="actionSend|flagNoEnterAction"
+            android:inputType="textCapSentences|textAutoCorrect|textMultiLine|textShortMessage"
+            android:maxLength="2000"
+            android:maxLines="8"
+            android:minHeight="34.0dp"
+            android:nextFocusRight="@+id/send_button"
+            android:textColor="#000000" />
+
+        <Button
+            android:id="@+id/send_button"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/sms_send_button_bg"
+            android:gravity="center"
+            android:nextFocusLeft="@id/text_editor"
+            android:paddingLeft="11.0dp"
+            android:paddingRight="11.0dp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_show"
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/txt_msg_bg"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <include
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/emotiongridview" />
+    </RelativeLayout>
+
+</com.iyuba.camstory.widget.ResizeLayout>

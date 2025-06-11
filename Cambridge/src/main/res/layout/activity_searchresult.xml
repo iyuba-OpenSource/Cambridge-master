@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/background"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout_search"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="#e0e8ed"
+        android:paddingLeft="5dip"
+        android:paddingRight="5dip" >
+           
+        <Spinner 
+            android:id="@+id/searchwhere"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:entries="@array/entrys_searchwhere"
+            />
+
+        <Button
+            android:id="@+id/findCancel"
+            android:layout_width="50dip"
+            android:layout_height="25dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:background="@drawable/camstory_button_bg_selector"
+            android:text="@string/social_search"
+            android:textSize="16sp"
+            android:textColor="#ffffff" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="35dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/searchwhere"
+            android:layout_toLeftOf="@id/findCancel"
+            android:background="@mipmap/searchbox" >
+
+            <Button
+                android:id="@+id/search_icon"
+                android:layout_width="27dip"
+                android:layout_height="27dip"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:background="@mipmap/search_icon" />
+
+            <EditText
+                android:id="@+id/edittext"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/search_icon"
+                android:background="#00000000"
+                android:imeOptions="actionSend"
+                android:singleLine="true"
+                android:textColor="#b1b6b9"
+                android:hint="@string/social_input_uname"
+                android:textCursorDrawable="@null" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <!-- <LinearLayout
+        android:id="@+id/searchView"
+        android:layout_width="fill_parent"
+        android:layout_height="40dip"
+        android:gravity="center" >
+
+        <Button
+            android:id="@+id/inFollows"
+            android:layout_width="0dip"
+            android:layout_height="40dip"
+            android:layout_weight="1"
+            android:background="#ffffff"
+            android:text="搜关注"
+            android:textColor="#164668"
+            android:textSize="16sp" >
+        </Button>
+
+        <Button
+            android:id="@+id/inFans"
+            android:layout_width="0dip"
+            android:layout_height="40dip"
+            android:layout_weight="1"
+            android:background="#ffffff"
+            android:text="搜粉丝"
+            android:textColor="#164668"
+            android:textSize="16sp" >
+        </Button>
+
+        <Button
+            android:id="@+id/inMutual"
+            android:layout_width="0dip"
+            android:layout_height="40dip"
+            android:layout_weight="1"
+            android:background="#ffffff"
+            android:text="相互关注"
+            android:textColor="#164668"
+            android:textSize="16sp" >
+        </Button>
+
+        <Button
+            android:id="@+id/inAll"
+            android:layout_width="0dip"
+            android:layout_height="40dip"
+            android:layout_weight="1"
+            android:background="#ffffff"
+            android:text="全部用户"
+            android:textColor="#164668"
+            android:textSize="16sp" >
+        </Button>
+    </LinearLayout> -->
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:src="#b1b6b9" />
+    
+    <TextView 
+        android:id="@+id/shake_it"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:text="请输入要搜索的用户名"
+        android:textSize="26sp"
+        />
+    
+
+    <ListView
+        android:id="@+id/findresult"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:divider="#b1b6b9"
+        android:dividerHeight="1dp"
+        android:visibility="gone" >
+    </ListView>
+
+</LinearLayout>

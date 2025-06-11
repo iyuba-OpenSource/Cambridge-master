@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/corner_card_layerlist"
+    android:descendantFocusability="blocksDescendants"
+    android:gravity="bottom"
+    android:paddingBottom="8dp" >
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:gravity="left"
+        android:shadowColor="#FFdcdcdc"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="105dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/name"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="3dp"
+        android:scaleType="centerInside" />
+
+    <ImageButton
+        android:id="@+id/downloadbutton"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="8dp"
+        android:background="@color/transparent"
+        android:src="@mipmap/news_download" />
+
+    <com.iyuba.camstory.widget.ProgressWheel
+        xmlns:ProgressWheel="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/videodownload_wheel"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="8dp"
+        ProgressWheel:barColor="#14e715"
+        ProgressWheel:barLength="5dp"
+        ProgressWheel:barWidth="2dp"
+        ProgressWheel:circleColor="@color/white"
+        ProgressWheel:contourColor="@color/white"
+        ProgressWheel:rimColor="#dcdcdc"
+        ProgressWheel:rimWidth="2dp"
+        ProgressWheel:text="0%"
+        ProgressWheel:textColor="#dcdcdc"
+        ProgressWheel:textSize="@dimen/read_deletebutton_textsize"
+        android:padding="0dp" />
+
+    <ImageButton
+        android:id="@+id/collectbutton"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="16dp"
+        android:layout_toLeftOf="@id/downloadbutton"
+        android:background="@color/transparent"
+        android:src="@mipmap/news_uncollect" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/name"
+        android:layout_toRightOf="@id/image"
+        android:layout_toLeftOf="@id/collectbutton"
+        android:layout_marginRight="16dp"
+        android:gravity="bottom"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/read_time_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="8dp"
+            android:gravity="left|bottom"
+            android:text="上次阅读"
+            android:textColor="#aa000000"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/read_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="8dp"
+            android:gravity="left|bottom"
+            android:text="2014-12-5 10:05"
+            android:textColor="#aa000000"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+</RelativeLayout>

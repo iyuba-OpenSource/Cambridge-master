@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ProgressWheel">
+        <attr name="text" format="string" />
+        <attr name="textColor" format="color" />
+        <attr name="textSize" format="dimension" />
+        <attr name="barColor" format="color" />
+        <attr name="rimColor" format="color" />
+        <attr name="rimWidth" format="dimension" />
+        <attr name="spinSpeed" format="dimension" />
+        <attr name="delayMillis" format="integer" />
+        <attr name="circleColor" format="color" />
+        <attr name="radius" format="dimension" />
+        <attr name="barWidth" format="dimension" />
+        <attr name="barLength" format="dimension" />
+        <attr name="contourColor" format="color" />
+        <attr name="contourSize" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="CircleImageView">
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+        <attr name="border_overlay" format="boolean" />
+    </declare-styleable>
+
+   <!-- <declare-styleable name="CircleProgressBar">
+        <attr name="newCircleColor" format="color" />
+        <attr name="newCircleProgressColor" format="color" />
+        <attr name="newCircleWidth" format="dimension"></attr>
+        <attr name="newTextColor" format="color" />
+        <attr name="newTextSize" format="dimension" />
+        <attr name="newMax" format="integer"></attr>
+        <attr name="newTextIsDisplayable" format="boolean"></attr>
+        <attr name="newCircleMargin" format="dimension"></attr>
+        <attr name="style">
+            <enum name="STROKE" value="0"></enum>
+            <enum name="FILL" value="1"></enum>
+        </attr>
+    </declare-styleable>-->
+
+    <declare-styleable name="CircularImageView">
+        <attr name="border_thickness" format="dimension" />
+        <attr name="border_outside_color" format="color" />
+        <attr name="border_inside_color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="RoundAngleImageView">
+        <attr name="roundWidth" format="dimension" />
+        <attr name="roundHeight" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="SingleSelectTestView">
+        <attr name="question" format="string" />
+        <attr name="itemA" format="string" />
+        <attr name="itemB" format="string" />
+        <attr name="itemC" format="string" />
+        <attr name="itemD" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomtimeImageView">
+        <attr name="customtime_hour" format="integer" />
+        <attr name="customtime_minute" format="integer" />
+        <attr name="customtime_second" format="integer" />
+    </declare-styleable>
+    <declare-styleable name="TestNumberImageView">
+        <attr name="testimageview_testnumber" format="integer" />
+        <attr name="testimageview_rightrate" format="integer" />
+    </declare-styleable>
+    <declare-styleable name="ChampionImageView">
+        <attr name="which_champion" format="string" />
+    </declare-styleable>
+    <declare-styleable name="IntValuesListPreferance">
+        <attr name="entries" format="reference"></attr>
+        <attr name="entryValues" format="reference"></attr>
+    </declare-styleable>
+    <declare-styleable name="Preference">
+        <attr name="summary" format="reference|string"></attr>
+        <attr name="defaultValue" format="integer|string|boolean"></attr>
+    </declare-styleable>
+   <!-- <style name="ChattingUIText">
+        <item name="android:textSize">15.0dip</item>
+        <item name="android:textColor">#ff000000</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:maxWidth">200.0dip</item>
+    </style>-->
+    <declare-styleable name="PagerSlidingTab">
+        <attr name="indicatorColor" format="color" />
+        <attr name="underlineColor" format="color" />
+        <attr name="dividerColor" format="color" />
+        <attr name="indicatorHeight" format="dimension" />
+        <attr name="underlineHeight" format="dimension" />
+        <attr name="pst_dividerPadding" format="dimension" />
+        <attr name="tabPaddingLeftRight" format="dimension" />
+        <attr name="scrollOffset" format="dimension" />
+        <attr name="tabBackgrounds" format="reference" />
+        <attr name="sameLine" format="boolean" />
+        <attr name="pst_textAllCaps" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="PageIndicator">
+        <attr name="pi_strokecolor" format="color" />
+        <attr name="pi_fillcolor" format="color" />
+        <attr name="pi_hightlightcolor" format="color" />
+        <attr name="pi_stroke" format="dimension" />
+        <attr name="pi_radius" format="dimension" />
+        <attr name="pi_count" format="integer" />
+        <attr name="pi_circlepadding" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="roundedImageView">
+        <attr name="border_thickness_num" format="dimension" />
+        <attr name="border_inside_color_rd" format="color" />
+        <attr name="border_progress_color" format="color" />
+        <attr name="border_outside_color_rd" format="color"/>
+        <attr name="show_image" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="PagerSlidingTabStrip">
+        <attr name="pstsIndicatorColor" format="color"/>
+        <attr name="pstsUnderlineColor" format="color"/>
+        <attr name="pstsDividerColor" format="color"/>
+        <attr name="pstsIndicatorWidth" format="dimension"/>
+        <attr name="pstsIndicatorHeight" format="dimension"/>
+        <attr name="pstsUnderlineHeight" format="dimension"/>
+        <attr name="pstsDividerPadding" format="dimension"/>
+        <attr name="pstsTabPaddingLeftRight" format="dimension"/>
+        <attr name="pstsScrollOffset" format="dimension"/>
+        <attr name="pstsTabBackground" format="reference"/>
+        <attr name="pstsShouldExpand" format="boolean"/>
+        <attr name="pstsTextAllCaps" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="DrawableTextView">
+        <attr name="dtvTitleSize" format="dimension"/>
+        <attr name="dtvTitleColor" format="color"/>
+        <attr name="dtvTitleText" format="reference"/>
+        <attr name="dtvImage" format="reference"/>
+        <attr name="dtvShowUnderline" format="boolean"/>
+    </declare-styleable>
+
+    <!--自定义MLImageView的属性 加上了自己的前缀，防止和其他自定义控件冲突-->
+    <declare-styleable name="SuperImageView">
+        <attr name="super_border_color" format="color"/>
+        <attr name="super_border_width" format="dimension"/>
+        <attr name="super_press_alpha" format="integer"/>
+        <attr name="super_press_color" format="color"/>
+        <attr name="super_radius" format="dimension"/>
+        <attr name="super_shape_type" format="enum">
+            <enum name="none" value="0"/>
+            <enum name="round" value="1"/>
+            <enum name="rectangle" value="2"/>
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="LoadingCircle">
+        <attr name="lcborder_color" format="color" />
+        <attr name="lcborder_width" format="dimension" />
+        <attr name="lcradius" format="dimension" />
+    </declare-styleable>
+
+
+
+    <declare-styleable name="AmountView">
+        <!-- 左右2边+-按钮的宽度 -->
+        <attr name="btnWidth" format="dimension" />
+        <!-- 中间TextView的宽度 -->
+        <attr name="tvWidth" format="dimension" />
+        <!--<attr name="tvColor" format="color"/>-->
+        <attr name="tvTextSize" format="dimension"/>
+        <attr name="btnTextSize" format="dimension"/>
+    </declare-styleable>
+    <!--<declare-styleable name="circleProgressBar">
+        <attr name="cp_circleColor" format="color" />
+        <attr name="cp_circleProgressColor" format="color" />
+        <attr name="cp_circleWidth" format="dimension"></attr>
+        <attr name="cp_textColor" format="color" />
+        <attr name="cp_textSize" format="dimension" />
+        <attr name="cp_max" format="integer"></attr>
+        <attr name="cp_textIsDisplayable" format="boolean"></attr>
+        <attr name="cp_style">
+            <enum name="STROKE" value="0"></enum>
+            <enum name="FILL" value="1"></enum>
+        </attr>
+    </declare-styleable>-->
+
+<!--    <declare-styleable name="circleProgressBar">-->
+<!--&lt;!&ndash;        <attr name="circleColor" format="color" />&ndash;&gt;-->
+<!--        <attr name="circleProgressColor" format="color" />-->
+<!--        <attr name="circleWidth" format="dimension"></attr>-->
+<!--&lt;!&ndash;        <attr name="textColor" format="color" />&ndash;&gt;-->
+<!--&lt;!&ndash;        <attr name="textSize" format="dimension" />&ndash;&gt;-->
+<!--        <attr name="max" format="integer"></attr>-->
+<!--        <attr name="textIsDisplayable" format="boolean"></attr>-->
+<!--        <attr name="style">-->
+<!--            <enum name="STROKE" value="0"></enum>-->
+<!--            <enum name="FILL" value="1"></enum>-->
+<!--        </attr>-->
+
+<!--        <attr name="newCircleColor" format="color" />-->
+<!--        <attr name="newCircleProgressColor" format="color" />-->
+<!--        <attr name="newCircleWidth" format="dimension"></attr>-->
+<!--        <attr name="newTextColor" format="color" />-->
+<!--        <attr name="newTextSize" format="dimension" />-->
+<!--        <attr name="newMax" format="integer"></attr>-->
+<!--        <attr name="newTextIsDisplayable" format="boolean"></attr>-->
+<!--        <attr name="newCircleMargin" format="dimension"></attr>-->
+<!--    </declare-styleable>-->
+
+    <declare-styleable name="myswiperefreshlayout">
+        <attr name="direction">
+            <enum name="direction_top" value="0" />
+            <enum name="direction_bottom" value="1" />
+            <enum name="direction_both" value="2" />
+        </attr>
+    </declare-styleable>
+    <attr name="textModeColor" format="color|reference" />
+    <attr name="mainBackground" format="color|reference" />
+    <attr name="titleBarColor" format="color|reference" />
+    <attr name="buttonBackColor" format="color|reference" />
+    <attr name="buttonTextColor" format="color|reference" />
+    <attr name="commentBackground" format="color|reference" />
+    <attr name="ic_main_arrow_up" format="color|reference" />
+    <attr name="ic_main_arrow_down" format="color|reference" />
+    <attr name="item_background" format="color|reference" />
+
+    <declare-styleable name="RoundProgressBar">
+        <attr name="newCircleColor" format="color"/>
+        <attr name="newCircleProgressColor" format="color"/>
+        <attr name="newCircleWidth" format="dimension"/>
+        <attr name="newTextColor" format="color"/>
+        <attr name="newTextSize" format="dimension"/>
+        <attr name="newMax" format="integer"/>
+        <attr name="newTextIsDisplayable" format="boolean"/>
+        <attr name="newCircleMargin" format="dimension"/>
+        <attr name="style">
+            <enum name="STROKE" value="0"/>
+            <enum name="FILL" value="1"/>
+        </attr>
+    </declare-styleable>
+
+</resources>

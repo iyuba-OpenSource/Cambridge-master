@@ -1,0 +1,6 @@
+include ':Animation-EasingFunctions', ':lycamplus-android-gift',
+        ':VOA_Constant', 'Cambridge', ':PopupMenu-library', ':SuperListViewLibrary',
+        ':datetimepicker', ':MultiThreadDownloader', ':JazzyListView',
+        ':wheel', ':http233', ':headNews_configation', ':swipebacklayoutlibrary',
+        ':pullToRefreshlibrary',  ':dailybonus'
+include ':common'

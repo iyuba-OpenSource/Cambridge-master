@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="70dip"
+    android:gravity="center_vertical">
+
+    <com.iyuba.voa.activity.widget.RoundAngleImageView
+        android:id="@+id/fanslist_portrait"
+        android:layout_width="50dip"
+        android:layout_height="50dip"
+        android:layout_marginBottom="5dip"
+        android:layout_marginLeft="5dip"
+        android:layout_marginRight="15dip"
+        android:layout_marginTop="5dip"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/defaultavatar" />
+
+    <LinearLayout
+        android:layout_width="0dip"
+        android:layout_height="50dip"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/fanslist_username"
+            android:layout_width="wrap_content"
+            android:layout_height="30dip"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="爱语吧"
+            android:textColor="#0e4976"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/fanslist_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="今天天气不好"
+            android:textColor="#808080" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/fans_sendmessage"
+            android:layout_width="37dip"
+            android:layout_height="33dip"
+            android:layout_marginRight="15dip"
+
+            android:focusable="false" />
+    </LinearLayout>
+</LinearLayout>

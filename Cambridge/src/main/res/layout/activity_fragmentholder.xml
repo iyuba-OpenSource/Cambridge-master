@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragmentholder"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffe8d7a1"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/toolbar"
+        android:layout_width="fill_parent"
+        android:layout_height="?actionBarSize"
+        android:background="?colorPrimary"
+        android:minHeight="?actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:navigationIcon="?homeAsUpIndicator"
+        app:popupTheme="?actionBarPopupTheme" />
+
+    <GridView
+        android:id="@+id/book_gridview11"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10.0dip"
+        android:layout_marginRight="10.0dip"
+        android:background="@color/transparent"
+        android:horizontalSpacing="10.0dip"
+        android:listSelector="@color/transparent"
+        android:numColumns="3"
+        android:verticalSpacing="10.0dip" />
+
+</LinearLayout>

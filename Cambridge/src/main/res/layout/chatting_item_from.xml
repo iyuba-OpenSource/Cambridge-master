@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="6.0dp"
+    android:paddingLeft="6.0dp"
+    android:paddingRight="6.0dp" >
+
+    <TextView
+        android:id="@+id/chatting_time_tv"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="5dp"
+        android:gravity="center"
+        android:text="03-19 08:52" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <com.iyuba.camstory.widget.RoundAngleImageView
+            android:id="@+id/chatting_content_iv"
+            android:layout_width="40dp"
+            android:layout_height="40.0dp"
+            android:layout_gravity="bottom"
+            android:scaleType="centerCrop"
+            android:src="@drawable/defaultavatar" />
+
+        <TextView
+            android:id="@+id/chatting_content_itv"
+            style="@style/ChattingUIText"
+            android:autoLink="web"
+            android:background="@drawable/chatfrom_bg"
+            android:text="aaaaa\naaaaa\naaaaa\naaaaa" />
+    </LinearLayout>
+
+</LinearLayout>

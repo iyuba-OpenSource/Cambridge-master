@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/root"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+    <!-- Load the toolbar here -->
+    <include
+        android:id="@+id/toolbar_buy_course"
+        layout="@layout/toolbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_buy_course_content"
+        android:layout_width="wrap_content"
+        android:layout_height="88dp"
+        android:layout_margin="12dp"
+        android:layout_below="@id/toolbar_buy_course">
+
+        <ImageView
+            android:id="@+id/iv_buy_course_pic"
+            android:layout_width="110dp"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:background="@drawable/live_list_item_image"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/tv_buy_course_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_toRightOf="@id/iv_buy_course_pic"
+            android:layout_marginLeft="12dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/course_name_black"
+            android:text="课程包的标题"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_buy_course_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@id/iv_buy_course_pic"
+            android:layout_marginLeft="12dp"
+            android:layout_marginBottom="6dp"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp"
+            android:text="199"/>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_buy_course_split"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_below="@id/rl_buy_course_content"
+        android:background="@color/split_line_gray"/>
+
+    <LinearLayout
+        android:id="@+id/ll_buy_course_type_select"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_below="@id/iv_buy_course_split"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_pay_type_select_tip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/live_decs_title_decoration"/>
+            <TextView
+                android:id="@+id/tv_pay_type_select_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:text="@string/buy_course_pay_type_select"
+                android:textSize="15sp"
+                android:textColor="@color/colorPrimary"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_buy_course_split2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/ll_buy_course_type_select"
+        android:background="@color/split_line_gray"/>
+
+    <RadioGroup
+        android:id="@+id/rg_pay_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_buy_course_split2"
+        android:orientation="vertical">
+        <RadioButton
+            android:id="@+id/rb_buy_course_paypal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/buy_course_item_selector"
+            android:button="@null"
+            android:drawableRight="@drawable/buy_course_radio_selector"
+            android:text="@string/buy_course_paypal"
+            android:visibility="gone"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/split_line_gray"
+            android:visibility="gone"/>
+        <RadioButton
+            android:id="@+id/rb_buy_course_iyubi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="15dp"
+            android:checked="true"
+            android:background="@drawable/buy_course_item_selector"
+            android:button="@null"
+            android:drawableRight="@drawable/buy_course_radio_selector"
+            android:text="@string/buy_course_iyubi"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/split_line_gray"/>
+    </RadioGroup>
+
+    <RelativeLayout
+        android:id="@+id/rl_buy_course_pay"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:layout_alignParentBottom="true">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/split_line_gray"/>
+
+        <TextView
+            android:id="@+id/tv_buy_course_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="@string/buy_course_pay_tip"
+            android:textColor="@color/black"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/tv_buy_course_payprice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/tv_buy_course_tip"
+            android:text="@string/course_content_curr_price"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp"/>
+
+        <Button
+            android:id="@+id/btn_pay_now"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/course_apply_now_bg"
+            android:text="@string/buy_course_to_pay"
+            android:textColor="@color/white"/>
+    </RelativeLayout>
+
+</RelativeLayout>

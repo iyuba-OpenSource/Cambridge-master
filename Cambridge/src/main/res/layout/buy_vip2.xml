@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/buyvip_backlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f3f3f3"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/buyvip_noLoginlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" >
+
+        <Button
+            android:id="@+id/buyvip_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/collection_no_login" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <RelativeLayout
+            android:id="@+id/buyvip_loginlayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <RelativeLayout
+                android:id="@+id/row0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:paddingBottom="5dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="5dp" >
+
+                <ImageView
+                    android:id="@+id/user_pic"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:scaleType="centerInside"
+                    android:src="@mipmap/username_icon" />
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/user_pic"
+                    android:text="@string/buy_user"
+                    android:textColor="#808080"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/buy_username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/textView1"
+                    android:text="holybible"
+                    android:textColor="#808080"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:id="@+id/iyubi_icon"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:layout_toLeftOf="@+id/textView2"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/iyubi_icon" />
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/buy_accountBalance"
+                    android:text="@string/buy_remind"
+                    android:textColor="#808080"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/buy_accountBalance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="980"
+                    android:textColor="#808080"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/sp_line_0"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/row0"
+                android:src="#dedede" />
+
+            <RelativeLayout
+                android:id="@+id/buy_vip_title1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sp_line_0" >
+
+                <TextView
+                    android:id="@+id/buy_vip_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/buy_allapp"
+                    android:textColor="#454545" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/sp_line_1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/buy_vip_title1"
+                android:layout_marginTop="5dp"
+                android:src="#dedede" />
+
+            <RelativeLayout
+                android:id="@+id/row1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sp_line_1"
+                android:background="#ffffff" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:text="全站会员1个月：200爱语币"
+                    android:textColor="#808080" />
+
+                <Button
+                    android:id="@+id/btn_onemonth"
+                    android:layout_width="40dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignTop="@+id/textView3"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/camstory_button_bg_selector"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    android:text="开通"
+                    android:textColor="#ffffff"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/sp_line_2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/row1"
+                android:src="#dedede" />
+
+            <RelativeLayout
+                android:id="@+id/row2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sp_line_2"
+                android:background="#ffffff" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:text="全站会员3个月：600爱语币"
+                    android:textColor="#808080" />
+
+                <Button
+                    android:id="@+id/btn_threemonth"
+                    android:layout_width="40dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/camstory_button_bg_selector"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    android:text="开通"
+                    android:textColor="#ffffff"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/sp_line_3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/row2"
+                android:src="#dedede" />
+
+            <RelativeLayout
+                android:id="@+id/row3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sp_line_3"
+                android:background="#ffffff" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:text="全站会员6个月：1000爱语币"
+                    android:textColor="#808080" />
+
+                <Button
+                    android:id="@+id/btn_sixmonth"
+                    android:layout_width="40dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/camstory_button_bg_selector"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    android:text="开通"
+                    android:textColor="#ffffff"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/sp_line_4"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/row3"
+                android:src="#dedede" />
+
+            <RelativeLayout
+                android:id="@+id/row4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sp_line_4"
+                android:background="#ffffff" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:text="全站会员12个月：2000爱语币"
+                    android:textColor="#808080" />
+
+                <Button
+                    android:id="@+id/btn_twelvemonth"
+                    android:layout_width="40dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/camstory_button_bg_selector"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    android:text="开通"
+                    android:textColor="#ffffff"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/sp_line_5"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/row4"
+                android:src="#dedede" />
+
+            <TextView
+                android:id="@+id/app_lifelong"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sp_line_5"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="25dp"
+                android:text="@string/buy_thisapp"
+                android:textColor="#1ac3e0"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/app_lifelong_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/app_lifelong"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/buyvip_applife_btnbg"
+                android:clickable="true"
+                android:drawableLeft="@mipmap/applifelongicon"
+                android:drawablePadding="8dp"
+                android:gravity="center"
+                android:text="成为本应用永久VIP"
+                android:textColor="#ffffff"
+                android:textSize="18sp" 
+                android:visibility="gone"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/app_lifelong_tv" />
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

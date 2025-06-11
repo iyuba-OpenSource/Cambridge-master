@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_coursenotice"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:paddingLeft="10dp"
+                android:textSize="15sp"
+                android:textColor="#67d49f"
+                android:text="@string/course_detail"
+                android:gravity="center_vertical"/>
+
+            <TextView
+                android:id="@+id/tv_subscribe"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:background="@drawable/shape_border_radius15"
+                android:textColor="@color/color_theme"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:layout_gravity="center_vertical|right"
+                android:layout_marginRight="10dp"
+                android:visibility="gone"/>
+        </FrameLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/mercury"/>
+
+        <LinearLayout
+            style="@style/MatchWrap.Horizontal"
+            android:padding="10dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                style="@style/WrapWrap"
+                android:drawableLeft="@drawable/icon_time"
+                android:drawablePadding="5dp"
+                android:textColor="#b8b8b8"
+                android:textSize="15sp"
+                android:text="@string/course_time"/>
+
+            <TextView
+                android:id="@+id/tv_time"
+                style="@style/AutoWrap"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:layout_marginLeft="10dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/MatchWrap.Horizontal"
+            android:padding="10dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                style="@style/WrapWrap"
+                android:drawableLeft="@drawable/icon_longtime"
+                android:drawablePadding="5dp"
+                android:textColor="#b8b8b8"
+                android:textSize="15sp"
+                android:text="@string/course_longtime"/>
+
+            <TextView
+                android:id="@+id/tv_longtime"
+                style="@style/AutoWrap"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:layout_marginLeft="10dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/MatchWrap.Horizontal"
+            android:padding="10dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                style="@style/WrapWrap"
+                android:drawableLeft="@drawable/icon_price"
+                android:drawablePadding="5dp"
+                android:textColor="#b8b8b8"
+                android:textSize="15sp"
+                android:text="@string/course_price"/>
+
+            <TextView
+                android:id="@+id/tv_price"
+                style="@style/AutoWrap"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:layout_marginLeft="10dp"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textColor="#888888"
+            android:textSize="14sp"/>
+    </LinearLayout>
+
+</ScrollView>

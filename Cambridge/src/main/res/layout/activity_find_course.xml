@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!-- Load the toolbar here -->
+    <include
+        android:id="@+id/toolbar_find_course"
+        layout="@layout/toolbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.iyuba.camstory.lycam.widget.recycleview.CustomSwipeToRefresh
+        xmlns:myswipe="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/swipe_refresh_find_course"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar_find_course">
+       <!--myswipe:direction="both"-->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview_find_course"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </com.iyuba.camstory.lycam.widget.recycleview.CustomSwipeToRefresh>
+
+    <ImageView
+        android:id="@+id/iv_scroll_top"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/iv_scroll_to_top" />
+
+</RelativeLayout>

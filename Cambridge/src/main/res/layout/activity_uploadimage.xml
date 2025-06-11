@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/backlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:background="@color/camstorygreen" >
+
+        <Button
+            android:id="@+id/upload_back_btn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/back_button" />
+
+        <TextView
+            android:textColor="#ffffff"
+            android:id="@+id/login_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:shadowColor="#ff000000"
+            android:shadowDx="3.0"
+            android:shadowDy="3.0"
+            android:shadowRadius="3.0"
+            android:text="@string/uploadimage"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_marginTop="5dp"
+        android:gravity="center" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical" >
+            <com.iyuba.camstory.widget.CircularImageView
+                android:id="@+id/userImage"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerHorizontal="true"
+                android:src="@mipmap/defaultavatar"
+                app:border_outside_color="#aaacacac"
+                app:border_thickness="1dp" >
+            </com.iyuba.camstory.widget.CircularImageView>
+
+            <!--<ImageView-->
+                <!--android:id="@+id/userImage"-->
+                <!--android:layout_width="70dp"-->
+                <!--android:layout_height="70dp"-->
+                <!--android:layout_marginBottom="5dp"-->
+                <!--android:src="@mipmap/userimg" >-->
+            <!--</ImageView>-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/uploadimage_current"
+                android:textColor="#a7a8a8" >
+            </TextView>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:text="@string/uploadimage_text"
+            android:textColor="#777777"
+            android:textSize="14sp" >
+        </TextView>
+
+        <Button
+            android:id="@+id/upLoad"
+            android:layout_width="80dp"
+            android:layout_height="35dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/camstory_button_bg_selector"
+            android:text="@string/uploadimage_comlete" >
+        </Button>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/blueimage"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_below="@+id/image"
+        android:layout_margin="5dp"
+        android:background="#7caed6"
+        android:gravity="center"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/blueimage"
+        android:layout_margin="5dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/photo"
+            android:layout_width="240dp"
+            android:layout_height="43dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/camstory_button_bg_selector"
+            android:text="@string/uploadimage_bycamera" />
+
+        <Button
+            android:id="@+id/local"
+            android:layout_width="240dp"
+            android:layout_height="43dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/camstory_button_bg_selector"
+            android:text="@string/uploadimage_bylocal" />
+
+        <Button
+            android:id="@+id/skip"
+            android:layout_width="240dp"
+            android:layout_height="43dp"
+            android:background="@drawable/camstory_button_bg_selector"
+            android:text="@string/uploadimage_skip" />
+    </LinearLayout>
+
+</RelativeLayout>

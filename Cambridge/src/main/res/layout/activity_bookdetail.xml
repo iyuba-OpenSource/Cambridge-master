@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <androidx.appcompat.widget.Toolbar
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/toolbar"
+        android:layout_width="fill_parent"
+        android:layout_height="?actionBarSize"
+        android:background="?colorPrimary"
+        android:minHeight="?actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:navigationIcon="?homeAsUpIndicator"
+        app:popupTheme="?actionBarPopupTheme" />
+
+    <RelativeLayout
+        android:id="@+id/bookinfolayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffe8d7a1">
+
+        <RelativeLayout
+            android:id="@+id/top_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12.0dip"
+            android:layout_marginTop="8.0dip"
+            android:layout_marginRight="12.0dip"
+            android:layout_marginBottom="8.0dip"
+            android:background="@mipmap/whitetemp"
+            android:padding="8.0dip">
+
+            <ImageView
+                android:id="@+id/tuding"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="图钉图片"
+                android:src="@mipmap/thumbtack" />
+
+            <ImageView
+                android:id="@+id/frontcover_little_imageview"
+                android:layout_width="130dip"
+                android:layout_height="190dip"
+                android:layout_below="@id/tuding"
+                android:layout_marginRight="12.0dip"
+                android:layout_toRightOf="@id/tuding"
+                android:adjustViewBounds="true"
+                android:background="@mipmap/frontcover_little"
+                android:contentDescription="小封面"
+                android:maxWidth="180dip"
+                android:maxHeight="180dip"
+                android:padding="2.0dip"
+                android:scaleType="fitCenter" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/frontcover_little_imageview"
+                android:layout_alignBottom="@id/frontcover_little_imageview"
+                android:layout_alignParentRight="true"
+                android:layout_toRightOf="@id/frontcover_little_imageview"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/booktitle_en"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:text="Big Hair Day"
+                    android:textColor="@color/colorTitle"
+                    android:textSize="14.0sp" />
+
+                <TextView
+                    android:id="@+id/booktitle_cn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:gravity="center_vertical"
+                    android:text="蓬发奇缘"
+                    android:textColor="@color/colorTitle"
+                    android:textSize="14.0sp" />
+
+                <TextView
+                    android:id="@+id/booklevel_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2.0"
+                    android:gravity="center_vertical"
+                    android:text="入门级"
+                    android:textColor="#ff7eaf2f"
+                    android:textSize="12.0sp" />
+
+                <TextView
+                    android:id="@+id/bookl_author"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:gravity="center_vertical"
+                    android:text="作者：Margaret Johnson"
+                    android:textColor="@color/colorText"
+                    android:textSize="12.0sp" />
+
+                <TextView
+                    android:id="@+id/book_interpreter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:gravity="center_vertical"
+                    android:text="译者：龚源来 兰芬芳"
+                    android:textColor="@color/colorText"
+                    android:textSize="12.0sp" />
+
+                <TextView
+                    android:id="@+id/book_wordcounts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:gravity="center_vertical"
+                    android:text="字数：35千字"
+                    android:textColor="@color/colorText"
+                    android:textSize="12.0sp" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="35dp"
+                    android:descendantFocusability="blocksDescendants"
+                    android:gravity="bottom"
+                    android:paddingBottom="4dp">
+
+                    <ImageView
+                        android:id="@+id/collectbutton"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginRight="16dp"
+                        android:background="@color/transparent"
+                        android:src="@mipmap/news_uncollect" />
+
+                    <ImageView
+                        android:id="@+id/downloadbutton"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginRight="8dp"
+                        android:background="@color/transparent"
+                        android:src="@mipmap/news_download" />
+
+                    <com.iyuba.camstory.widget.ProgressWheel xmlns:ProgressWheel="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/videodownload_wheel"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginRight="8dp"
+                        android:padding="0dp"
+                        android:visibility="gone"
+                        ProgressWheel:barColor="#14e715"
+                        ProgressWheel:barLength="5dp"
+                        ProgressWheel:barWidth="2dp"
+                        ProgressWheel:circleColor="@color/white"
+                        ProgressWheel:contourColor="@color/white"
+                        ProgressWheel:rimColor="#dcdcdc"
+                        ProgressWheel:rimWidth="2dp"
+                        ProgressWheel:text="0%"
+                        ProgressWheel:textColor="#dcdcdc"
+                        ProgressWheel:textSize="@dimen/read_deletebutton_textsize" />
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabs_chapter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpager_chapter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

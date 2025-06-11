@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/word"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/wordcard_margin"
+    android:background="@drawable/border"
+    android:orientation="vertical"
+    android:padding="@dimen/wordcard_padding" >
+    <ProgressBar
+        android:id="@+id/progressBar_get_Interperatatior"
+        android:layout_width="20dp"
+        android:layout_height="20dp" />
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/word_key"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textColor="#2983c1"
+                android:textSize="@dimen/wordcard_keysize" />
+
+            <TextView
+                android:id="@+id/word_pron"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/word_key"
+                android:layout_marginLeft="@dimen/wordcard_pronMarginLeft"
+                android:textColor="@color/royalblue"
+                android:textSize="@dimen/wordcard_pronsize" />
+
+            <ImageView
+                android:id="@+id/word_speaker"
+                android:layout_width="@dimen/wordcard_speakerSize"
+                android:layout_height="@dimen/wordcard_speakerSize"
+                android:layout_alignParentRight="true"
+                android:src="@mipmap/speaker" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/word_def"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+             android:maxLines="4"
+            android:singleLine="false"
+            android:scrollY="0dp"
+            android:layout_marginTop="@dimen/wordcard_lineMarginTop"
+            android:textColor="#8B4513"
+            android:textSize="@dimen/wordcard_defTextSize" />
+        <TextView
+            android:id="@+id/example"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="4"
+            android:singleLine="false"
+            android:textColor="#000000"
+            android:scrollY="0dp"
+            android:textSize="@dimen/wordcard_exampleTextSize" />
+    </LinearLayout>
+
+     <ImageView
+        android:id="@+id/line"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="@dimen/wordcard_lineMarginTop"
+        android:background="#dcdcdc" /> 
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/wordcard_lineMarginTop"
+        android:minHeight="@dimen/wordcard_buttonHeight"
+        android:gravity="center" >
+
+        <Button
+            android:id="@+id/word_add"
+            android:layout_width="@dimen/wordcard_buttonWidth"
+            android:layout_height="@dimen/wordcard_buttonHeight"
+            android:background="@drawable/button_shape"
+            android:minHeight="@dimen/wordcard_buttonWidth"
+            android:text="@string/word_add"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/wordcard_buttonTextSize" />
+        <Button
+            android:id="@+id/word_close"
+            android:layout_width="@dimen/wordcard_buttonWidth"
+            android:layout_height="@dimen/wordcard_buttonHeight"
+            android:layout_marginLeft="@dimen/wordcard_buttonMarginLeft"
+            android:layout_toRightOf="@+id/word_add"
+            android:background="@drawable/button_shape"
+            android:text="@string/word_close"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/wordcard_buttonTextSize" />
+    </RelativeLayout>
+
+</LinearLayout>

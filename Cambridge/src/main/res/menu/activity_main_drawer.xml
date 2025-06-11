@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/vip_center"
+        android:icon="@drawable/p_vip"
+        android:title="会员中心" />
+
+    <item
+        android:id="@+id/sign_in"
+        android:icon="@drawable/sgin"
+        android:title="打卡" />
+
+    <item
+        android:id="@+id/show_tv"
+        android:icon="@drawable/look_one"
+        android:title="视频" />
+
+    <item
+        android:id="@+id/study"
+        android:icon="@drawable/study"
+        android:title="学一学" />
+
+    <!--暂时关闭这个-->
+    <item
+        android:id="@+id/rl_discover_media_book"
+        android:icon="@drawable/bookstore"
+        android:title="全媒体图书"
+        android:visible="false"/>
+
+    <item
+        android:id="@+id/rl_discover_order_detail"
+        android:icon="@drawable/order"
+        android:title="订单详情"
+        android:visible="false"/>
+
+    <!--
+    <item
+        android:id="@+id/collect"
+        android:icon="@drawable/collect"
+        android:title="收藏" />
+    <item
+        android:id="@+id/download"
+        android:title="下载"/>-->
+
+    <item
+        android:id="@+id/study_ranking"
+        android:icon="@drawable/rank"
+        android:title="排行榜"/>
+    <item
+        android:id="@+id/rl_discover_gift"
+        android:icon="@drawable/discover_gift"
+        android:title="礼物"
+        android:visible="false"/>
+
+    <item
+        android:id="@+id/update_service"
+        android:icon="@drawable/ic_update_service"
+        android:title="更新服务" />
+
+    <item
+        android:id="@+id/nav_feedback"
+        android:icon="@drawable/ic_menu_gallery"
+        android:title="意见反馈"
+        android:visible="false"/>
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_living"
+            android:icon="@drawable/ic_menu_camera"
+            android:visible="false"
+            android:title="爱语直播" />
+
+
+    </group>
+
+    <item android:title="关于">
+        <menu>
+            <item
+                android:id="@+id/nav_about"
+                android:icon="@drawable/ic_menu_send"
+                android:title="关于爱语吧"
+                />
+            <item
+                android:id="@+id/nav_suggest"
+                android:icon="@drawable/ic_menu_share"
+                android:title="推荐给朋友们"
+                android:visible="false"/>
+        </menu>
+    </item>
+
+</menu>

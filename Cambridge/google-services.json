@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "4137578258",
+    "firebase_url": "https://camstory-3797a.firebaseio.com",
+    "project_id": "camstory-3797a",
+    "storage_bucket": "camstory-3797a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:4137578258:android:5b8b4722a4e0c4de",
+        "android_client_info": {
+          "package_name": "com.iyuba.camstory"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "4137578258-1vkkqg1610f3qfctd6ir8d5iuejs5vb2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxmUWMR2zfF4Vj8uFawyor0u9n-TuOwpE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

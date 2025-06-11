@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="?colorPrimary"
+        android:minHeight="50dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:navigationIcon="?homeAsUpIndicator"
+        app:popupTheme="?actionBarPopupTheme" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tablayout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#ffffffff"
+        app:tabIndicatorColor="?attr/colorPrimary" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/id_stickynavlayout_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/rl_ad" />
+
+        <RelativeLayout
+            android:id="@+id/rl_ad"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:visibility="gone"
+            android:layout_alignParentBottom="true">
+            <ImageView
+                android:id="@+id/adtips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/ic_ad_close"
+                android:layout_margin="5dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"/>
+            <RelativeLayout
+                android:id="@+id/downloadBtn"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/photoImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:scaleType="matrix" />
+
+                <RelativeLayout
+                    android:id="@+id/ad_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/iv_web_ad"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:scaleType="fitXY"
+                        android:visibility="visible" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:gravity="center_vertical"
+                android:text="推广"
+                android:padding="3dp"
+                android:textColor="@android:color/black"
+                android:drawableRight="@drawable/close_bg"
+                android:textSize="10dp" />
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

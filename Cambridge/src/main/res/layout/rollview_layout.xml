@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="145dp">
+
+    <ImageView
+        android:id="@+id/roll_view_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"/>
+
+    <TextView
+        android:id="@+id/roll_view_title"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:gravity="bottom"
+        android:paddingLeft="10dp"
+        android:paddingBottom="5dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/rollview_title_bg"
+        android:textColor="@color/white"
+        android:textSize="14sp"/>
+
+</RelativeLayout>

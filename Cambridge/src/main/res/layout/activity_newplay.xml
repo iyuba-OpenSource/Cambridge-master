@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/layout_play">
+    <!--android:fitsSystemWindows="true"-->
+
+    <LinearLayout
+        android:id="@+id/layout_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:background="@color/colorPrimary">
+            <ImageView
+                android:id="@+id/btn_back"
+                style="@style/WrapWrap"
+                android:layout_gravity="center_vertical|left"
+                android:clickable="true"
+                android:padding="8dp"
+                android:src="@drawable/button_back_selector"/>
+            <TextView
+                android:id="@+id/tv_title"
+                style="@style/WrapWrap"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:layout_marginRight="80dp"
+                android:layout_marginLeft="80dp"/>
+            <ImageView
+                android:id="@+id/btn_share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:padding="8dp"
+                android:src="@drawable/icon_about_share"/>
+        </FrameLayout>
+
+        <!--<include
+            layout="@layout/simple_player_view_player"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_below="@+id/toolbar"/>-->
+
+        <RelativeLayout
+            android:id="@+id/app_video_box"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_below="@+id/toolbar"
+            >
+            <tv.lycam.ijkplayer.widget.IjkVideoView
+                android:id="@+id/video_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <LinearLayout
+                android:id="@+id/ll_bg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/black"
+                android:orientation="vertical">
+
+                <!-- 封面显示-->
+                <ImageView
+                    android:id="@+id/iv_trumb"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerInside"
+                    android:visibility="visible"/>
+            </LinearLayout>
+
+            <!--重新播放-->
+            <LinearLayout
+                android:id="@+id/app_video_replay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#33000000"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+                <!-- 播放状态-->
+                <TextView
+                    android:id="@+id/app_video_status_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/small_problem"
+                    android:textColor="@android:color/white"
+                    android:textSize="14dp"/>
+
+                <ImageView
+                    android:id="@+id/app_video_replay_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/simple_player_circle_outline_white_36dp"/>
+            </LinearLayout>
+            <!-- 网络提示-->
+            <LinearLayout
+                android:id="@+id/app_video_netTie"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#33000000"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:text="您正在使用移动网络播放视频\n可能产生较高流量费用"
+                    android:textColor="@android:color/white"/>
+
+                <TextView
+                    android:id="@+id/app_video_netTie_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/simple_player_btn"
+                    android:gravity="center"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:text="继续"
+                    android:textColor="@android:color/white"/>
+            </LinearLayout>
+
+            <!--加载中-->
+            <LinearLayout
+                android:id="@+id/app_video_loading"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <ProgressBar
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:indeterminateBehavior="repeat"
+                    android:indeterminateDrawable="@anim/loading"
+                    android:indeterminateOnly="true"/>
+
+                <TextView
+                    android:id="@+id/app_video_speed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:gravity="center"
+                    android:text="188Kb/s"
+                    android:textColor="@android:color/white"
+                    android:visibility="gone"/>
+            </LinearLayout>
+
+            <!-- 中间触摸提示-->
+            <include
+                layout="@layout/simple_player_touch_gestures"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"/>
+
+            <!-- 顶部栏-->
+            <include layout="@layout/simple_player_topbar"/>
+            <!-- 底部栏-->
+            <include
+                layout="@layout/simple_player_controlbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"/>
+
+            <!--声音亮度控制-->
+            <LinearLayout
+                android:id="@+id/simple_player_settings_container"
+                android:layout_width="250dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:background="#80000000"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:id="@+id/simple_player_volume_controller_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/qcloud_player_icon_audio_vol_mute"/>
+
+                    <SeekBar
+                        android:id="@+id/simple_player_volume_controller"
+                        style="@style/SeekBarAppTheme_White"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"/>
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/qcloud_player_icon_audio_vol"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/simple_player_brightness_controller_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:padding="5dp"
+                        android:src="@drawable/qcloud_player_icon_brightness"/>
+
+                    <SeekBar
+                        android:id="@+id/simple_player_brightness_controller"
+                        style="@style/SeekBarAppTheme_White"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"/>
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/qcloud_player_icon_brightness"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <!--分辨率选择-->
+            <LinearLayout
+                android:id="@+id/simple_player_select_stream_container"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="#80000000"
+                android:gravity="center_vertical"
+                android:visibility="gone">
+
+                <ListView
+                    android:id="@+id/simple_player_select_streams_list"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/play_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/simple_player_center_play"/>
+
+        </RelativeLayout>
+        <!--
+        <com.iyuba.live.lycam.ui.LycamPlayView
+            android:id="@+id/view_play"
+            style="@style/WrapWrap"
+            android:layout_below="@+id/toolbar"/>
+            -->
+
+    </LinearLayout>
+
+    <master.flame.danmaku.ui.widget.DanmakuView
+        android:id="@+id/danmakuView"
+        style="@style/MatchMatch"
+        android:visibility="gone"
+        android:layout_marginTop="50dp"/>
+
+    <LinearLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        style="@style/MatchMatch"
+        android:orientation="vertical"
+        android:layout_below="@+id/layout_top">
+
+        <LinearLayout
+            android:id="@+id/layout_info"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <com.iyuba.camstory.lycam.ui.SuperImageView
+                android:id="@+id/iv_avatar"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                app:super_shape_type="round"/>
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textSize="15sp"
+                android:layout_marginLeft="5dp"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/tv_follow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textSize="13sp"
+                android:textColor="@color/gray_normal"/>
+        </LinearLayout>
+        <FrameLayout
+            android:id="@+id/layout_content"
+            style="@style/MatchAuto"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_chat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray_alpha55"
+        android:orientation="horizontal"
+        android:padding="2dp"
+        android:layout_alignParentBottom="true">
+
+        <EditText
+            android:id="@+id/et_message"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_frame_gray55_white2"
+            android:imeOptions="flagNoExtractUi|actionSend"
+            android:singleLine="true"
+            android:textColor="@color/gray"
+            android:textColorHint="@color/translucent_black"/>
+
+        <ImageView
+            android:id="@+id/iv_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:padding="4dp"
+            android:src="@drawable/img_send_selector"
+            android:layout_gravity="center_vertical"/>
+
+        <ImageView
+            android:id="@+id/iv_exitfull"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:src="@drawable/icon_exitfull"
+            android:visibility="gone"
+            android:clickable="true"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

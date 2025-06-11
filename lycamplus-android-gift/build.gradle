@@ -1,0 +1,37 @@
+apply plugin: 'com.android.library'
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+  /*  repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }*/
+}
+
+dependencies {
+    api fileTree(include: ['*.jar'], dir: 'libs')
+    //    compile (name: 'lycamplusmqtt', ext: 'aar')
+    api 'tv.lycam:lycamplus-android-mqtt:0.1.5'
+    compileOnly "com.squareup.retrofit2:retrofit:2.3.0"
+    api 'com.squareup.retrofit2:converter-jackson:2.3.0'
+    //    compile 'com.facebook.fresco:fresco:0.10.0'
+    //    compile 'com.squareup.picasso:picasso:2.5.2'
+    api 'org.apache.commons:commons-collections4:4.1'
+    //provided 'com.squareup.retrofit2:retrofit:2.1.0'
+    api 'com.github.florent37:viewanimator:1.0.4'
+    api 'com.github.ctiao:dfm:0.4.6'
+    api 'com.github.bumptech.glide:glide:3.7.0'
+    api 'androidx.appcompat:appcompat:1.0.0'
+    api 'androidx.recyclerview:recyclerview:1.0.0'
+}

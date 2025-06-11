@@ -1,0 +1,83 @@
+apply plugin: 'com.android.library'
+
+repositories {
+    jcenter()
+}
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    aaptOptions.cruncherEnabled = false
+    aaptOptions.useNewCruncher = false
+
+//    repositories {
+//        repositories {
+//            flatDir {
+//                dirs '../cet4_lib/libs'
+//            }
+//        }
+//    }
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    useLibrary 'org.apache.http.legacy'
+}
+
+dependencies {
+    api fileTree(include: ['*.jar'], dir: 'libs')
+    //    compile project(':configation')
+    //    compile project(':cet4_lib')
+    api files('libs/Sunflower.jar')
+    //科大讯飞的包
+//    api files('libs/Msc.jar')
+    //科大讯飞的包
+    //    provided files('libs/libammsdk.jar')
+    api 'com.android.support:multidex:1.0.3'
+    api "com.android.support:appcompat-v7:$rootProject.ext.supportLibraryVersion"
+    api "com.android.support:recyclerview-v7:$rootProject.ext.supportLibraryVersion"
+    api 'com.android.support.constraint:constraint-layout:1.0.2'
+    //下载
+    api 'com.liulishuo.filedownloader:library:1.6.5'
+    api 'org.greenrobot:eventbus:3.0.0'
+    api('com.flyco.roundview:FlycoRoundView_Lib:1.0.0@aar') {
+        exclude group: 'com.android.support'
+    }
+    api 'com.github.bumptech.glide:glide:3.8.0'
+    api 'com.journeyapps:zxing-android-embedded:3.5.0'
+    compileOnly 'com.squareup.okhttp3:okhttp:3.9.0'
+    compileOnly 'com.squareup.okhttp3:logging-interceptor:3.9.0'
+
+    final RETROFIT_VERSION = "$rootProject.ext.retrofitVersion"
+    final OKHTTP_VERSION = "$rootProject.ext.okhttpVersion"
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    api "com.squareup.retrofit2:retrofit:$RETROFIT_VERSION"
+    api "com.squareup.retrofit2:converter-gson:$RETROFIT_VERSION"
+    api 'com.android.volley:volley:1.1.0'
+    api('com.jaeger.statusbarutil:library:1.4.0') {
+        exclude group: 'com.android.support'
+    }
+    api project(':http233')
+//    api project(':mob')
+    //api "com.youdao.sdk:youdaoadsdk:$rootProject.ext.youdaoSdkVersion"
+    //    compile('commonres-release:@aar')
+    api 'de.hdodenhof:circleimageview:2.2.0'
+    api 'cn.bingoogolapple:bga-swipebacklayout:1.1.5'
+    //    compile '   '
+}

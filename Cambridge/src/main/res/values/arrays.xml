@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+
+    <string-array name="choose_player">
+        <item>默认播放器</item>
+        <item>调速播放器</item>
+    </string-array>
+
+    <string-array name="pay_methods_images">
+        <item>@drawable/pay_zhifubao_icon</item>
+        <!--<item>@drawable/pay_weixin_icon</item>-->
+    </string-array>
+
+    <string-array name="entries_languagelist">
+        <item>English</item>
+        <item>简体中文</item>
+    </string-array>
+    <string-array name="entryValues_languagelist">
+        <item>en</item>
+        <item>zh</item>
+    </string-array>
+    <string-array name="entries_playmode">
+        <item>单曲循环</item>
+        <item>顺序播放</item>
+        <item>随机播放</item>
+    </string-array>
+    <string-array name="entryValues_playmode">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="entrys_searchwhere">
+        <item>全站用户</item>
+        <item>我的粉丝</item>
+        <item>我的关注</item>
+        <item>相互关注</item>
+    </string-array>
+    <string-array name="gender">
+        <item>男</item>
+        <item>女</item>
+    </string-array>
+    <string-array name="pay_methods">
+        <item>支付宝支付</item>
+        <!--<item>微信支付</item>-->
+        <!--<item>银行卡支付</item>-->
+    </string-array>
+    <string-array name="pay_method_hints">
+        <item>推荐有支付宝账号的用户使用</item>
+        <!--<item>推荐安装微信5.0及以上版本的使用</item>-->
+        <!--<item>支持储蓄卡信用卡，无需开通网银</item>-->
+    </string-array>
+    <string-array name="iyubi_prices">
+        <item>19.9</item>
+        <item>59.9</item>
+        <item>99.9</item>
+        <item>599</item>
+        <item>999</item>
+    </string-array>
+    <integer-array name="iyubi_amounts">
+        <item>210</item>
+        <item>650</item>
+        <item>1100</item>
+        <item>6600</item>
+        <item>12000</item>
+    </integer-array>
+    <string-array name="story_leve">
+        <item>入门级</item>
+        <item>一级</item>
+        <item>二级</item>
+        <item>三级</item>
+        <item>四级</item>
+        <item>五级</item>
+        <item>六级</item>
+    </string-array>
+    <string-array name="web_more">
+        <item>复制连接</item>
+        <item>在浏览器中打开</item>
+        <item>重新加载</item>
+    </string-array>
+
+    <!-- pay information -->
+    <string-array name="iyubi_images">
+        <item>@drawable/iyubi_210</item>
+        <item>@drawable/iyubi_650</item>
+        <item>@drawable/iyubi_1100</item>
+        <item>@drawable/iyubi_6600</item>
+        <item>@drawable/iyubi_12000</item>
+    </string-array>
+
+</resources>

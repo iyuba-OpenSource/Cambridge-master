@@ -1,0 +1,26 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    api(project(":common"))
+    compileOnly 'androidx.appcompat:appcompat:1.0.0'
+    compileOnly "com.squareup.okhttp3:okhttp:$rootProject.ext.okhttpVersion"
+    compileOnly 'com.squareup.okhttp3:logging-interceptor:3.9.0'
+    compileOnly 'com.google.code.gson:gson:2.9.0'
+}

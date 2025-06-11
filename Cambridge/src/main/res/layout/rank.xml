@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/titlebar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <androidx.legacy.widget.Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"/>
+
+        <TextView
+            android:id="@+id/rank_listen"
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:background="@drawable/rank_button"
+            android:gravity="center"
+            android:text="听力"
+            android:layout_weight="1"
+            android:textColor="@color/colorPrimary" />
+
+        <TextView
+            android:id="@+id/rank_study"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="25dp"
+            android:background="@drawable/rank_button"
+            android:gravity="center"
+            android:text="学习"
+            android:textColor="@color/theme_color" />
+
+        <androidx.legacy.widget.Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"/>
+
+    </LinearLayout>
+   <androidx.viewpager.widget.ViewPager
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:id="@+id/view_pager"
+       android:measureAllChildren="true">
+   </androidx.viewpager.widget.ViewPager>
+</LinearLayout>
+

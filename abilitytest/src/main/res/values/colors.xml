@@ -1,0 +1,36 @@
+<resources>
+
+    <!--透明效果-->
+    <color name="transparent">#00000000</color>
+    <color name="stroke_color">#c8c8c8</color>
+
+    <!-- 界面背景浅灰色 -->
+    <color name="bg_gray_color">#efeff4</color>
+    <color name="text_bluenor_color">#6DC5D9</color>
+    <color name="text_bluenor_color_press">#aa6DC5D9</color>
+    <color name="black_opaque">#AA000000</color>
+    <color name="text_purple_color">#b362be</color>
+
+    <!--雅思能力测试背景颜色-->
+    <color name="bg_ability">#F3F9F9</color>
+
+    <color name="text_blue_color">#6BBDCE</color>
+
+    <!--雅思字体的蓝绿色 -->
+    <color name="text_black_color">#303030</color>
+
+    <color name="text_gray_color">#808080</color>
+    <!-- 绿色 -->
+    <color name="green">#008000</color>
+    <color name="white">#ffffff</color>
+
+
+    <color name="divider_line">#e2e2e2</color>
+    <color name="title_bar_bg">#eff0f4</color>
+    <color name="green_dark">#00A800</color>
+
+    <color name="line_hint_color">#b2b2b2</color>
+
+    <color name="btn_pressed">#6495ED</color>
+
+</resources>

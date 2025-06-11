@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory android:title="@string/setting_base" >
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="highspeed_download"
+            android:negativeButtonText="@string/cancel"
+            android:positiveButtonText="@string/ok"
+            android:summary="@string/person_award_content"
+            android:title="@string/setting_base_highspeed_download" >
+        </CheckBoxPreference>
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="nightmode"
+            android:title="@string/setting_night_mod" >
+        </CheckBoxPreference>
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="sleepmode"
+            android:title="@string/setting_sleep_mod" >
+        </CheckBoxPreference>
+
+        <EditTextPreference
+            android:defaultValue="20"
+            android:dependency="sleepmode"
+            android:dialogMessage="设置30,表示30分钟后关闭程序"
+            android:key="sleeptime"
+            android:summary="设置多少分钟后关闭程序"
+            android:title="睡眠模式时间" >
+        </EditTextPreference>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/setting_others" >
+        <Preference
+            android:key="media_saving_path"
+            android:title="@string/setting_file_path" />
+        <Preference
+            android:key="picCacheSize"
+            android:title="@string/setting_clear_pic" />
+
+        <Preference
+            android:key="lookad"
+            android:summary="@string/setting_look_ad_explain"
+            android:title="@string/setting_look_ad" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

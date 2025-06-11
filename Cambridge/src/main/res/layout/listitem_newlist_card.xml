@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/corner_card_layerlist"
+    android:descendantFocusability="blocksDescendants"
+    android:gravity="bottom"
+    android:paddingBottom="8dp" >
+
+    <ImageView
+        android:id="@+id/checkBox_isDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_margin="5dp"
+        android:src="@android:drawable/checkbox_off_background" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:gravity="left"
+        android:shadowColor="#FFdcdcdc"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="105dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/name"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="3dp"
+        android:layout_toRightOf="@id/checkBox_isDelete"
+        android:scaleType="centerInside" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/name"
+        android:layout_toRightOf="@id/image"
+        android:gravity="bottom"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/readcount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="8dp"
+            android:gravity="left|bottom"
+            android:text="1000次阅读"
+            android:textColor="#aa000000"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:gravity="left"
+            android:text="2014-06-25"
+            android:textColor="#aa000000"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/downloadbutton"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="8dp"
+        android:background="@color/transparent"
+        android:src="@mipmap/news_download" />
+
+    <com.iyuba.voa.activity.widget.ProgressWheel
+        xmlns:ProgressWheel="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/videodownload_wheel"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="8dp"
+        ProgressWheel:barColor="#14e715"
+        ProgressWheel:barLength="5dp"
+        ProgressWheel:barWidth="2dp"
+        ProgressWheel:circleColor="@color/white"
+        ProgressWheel:contourColor="@color/white"
+        ProgressWheel:rimColor="#dcdcdc"
+        ProgressWheel:rimWidth="2dp"
+        ProgressWheel:text="0%"
+        ProgressWheel:textColor="#dcdcdc"
+        ProgressWheel:textSize="@dimen/read_deletebutton_textsize"
+        android:padding="0dp" />
+
+    <ImageButton
+        android:id="@+id/collectbutton"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="16dp"
+        android:layout_toLeftOf="@id/downloadbutton"
+        android:background="@color/transparent"
+        android:src="@mipmap/news_uncollect" />
+
+</RelativeLayout>

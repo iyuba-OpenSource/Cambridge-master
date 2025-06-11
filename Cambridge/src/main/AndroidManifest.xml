@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.iyuba.camstory">
+    <!-- 必加权限 -->
+    <!-- 网络访问权限 -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 获取 WiFi 状态 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- 获取网络信息状态，如当前的网络连接是否有效 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 读取手机状态 phone group -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- 往 SDCard 读写数据权限 storage group -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- 定位相关权限，建议添加，便于广告的定向 locationgroup -->
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" /> <!-- <uses-permission android:name="android.permission.INTERNET" /> -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
+<!--    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />-->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" /> <!-- <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+<!--    <uses-permission android:name="android.permission.WRITE_SETTINGS" />-->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+<!--    <uses-permission android:name="android.permission.READ_LOGS" />-->
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION" /> <!-- 权限 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <application
+        android:name=".frame.CrashApplication"
+        android:allowBackup="false"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+
+        tools:replace="android:name,android:label,android:icon,android:allowBackup,android:theme,android:networkSecurityConfig">
+
+        <!-- 适配9.0网络请求 -->
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.1" />
+
+        <activity
+            android:name=".MainActivity"
+            android:label="剑桥英语馆"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".BookDetailActivity"
+            android:configChanges="keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SignActivity"
+            android:configChanges="keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ChapterDetailActivity"
+            android:launchMode="singleTop"
+            android:configChanges="keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AboutActivity"
+            android:configChanges="keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Feedback"
+            android:configChanges="keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".WebActivity"
+            android:configChanges="keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MeActivity"
+            android:configChanges="keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".LoginActivity"
+            android:configChanges="keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".living.FindCourseActivity"
+            android:configChanges="keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".living.LiveListActivity"
+            android:configChanges="keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".living.LiveContentActivity"
+            android:configChanges="keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".lycam.activity.BaseActivity"
+            android:configChanges="keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".lycam.activity.NewPlayActivity"
+            android:configChanges="keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".lycam.activity.PlayBaseActivity"
+            android:configChanges="keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".BuyVipActivity"
+            android:configChanges="keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MessageActivity"
+            android:configChanges="keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".FindFriendByNameActivity"
+            android:configChanges="keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MessageLetterContentActivity"
+            android:configChanges="keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".FragmentHolderActivity"
+            android:configChanges="keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".FragmentHolderActivity1"
+            android:configChanges="keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".living.BuyCourseActivity"
+            android:configChanges="keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".RegistByPhoneActivity"
+            android:configChanges="keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".RegistSubmitActivity"
+            android:configChanges="keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".RegistActivity"
+            android:configChanges="keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UpLoadImageActivity"
+            android:configChanges="keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".EditUserInfoActivity"
+            android:configChanges="keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UserDetailInfo"
+            android:configChanges="keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".lil.ui.MocShowActivity"
+            android:configChanges="keyboardHidden"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name=".service.Background"
+            android:enabled="true"
+            android:persistent="true" />
+
+        <activity
+            android:name=".AttentionCenter"
+            android:configChanges="keyboardHidden|orientation|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".FansCenter"
+            android:configChanges="keyboardHidden|orientation|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" /> <!-- 分享 -->
+        <!-- 微信分享回调 -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" /> <!-- 广告 -->
+        <activity
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:theme="@android:style/Theme.Translucent" /> <!-- 支付 -->
+        <activity
+            android:name="com.alipay.sdk.auth.AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind" />
+
+        <activity
+            android:name=".pay.PayOrderActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="true"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="myhost"
+                    android:pathPrefix="/com.iyuba.camstory/open"
+                    android:scheme="myscheme" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="@string/file_provider_name_personal"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+        <activity android:name=".BookMarketActivity" />
+        <activity android:name=".protocol.bookstoreui.BookDetailActivity2" />
+        <activity android:name=".protocol.bookstoreui.OrderConfirmActivity" />
+        <activity android:name=".protocol.bookstoreui.ShopCartActivity" />
+        <activity android:name=".protocol.bookstoreui.BookMarketOrderPayActivity" />
+        <activity android:name=".protocol.bookstoreui.ModifyAddressActivity" />
+        <activity android:name=".protocol.bookstoreui.OrderDetailActivity" />
+        <activity android:name=".protocol.web.WebContent" /> <!-- SDK中Activity配置 -->
+        <service android:name=".service.BackGroundMusicService"/>
+        <activity
+            android:name=".PrepareActivity"
+            android:screenOrientation="portrait"
+            android:exported="true"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SplashActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".WebviewActivity" />
+        <activity android:name=".RankActivity" />
+        <activity
+            android:name="com.iyuba.abilitytest.activity.WebActivity"
+            android:configChanges="keyboardHidden|orientation" /> <!-- 能力图谱 -->
+        <activity
+            android:name="com.iyuba.abilitytest.activity.AbilityMapActivity"
+            android:configChanges="keyboardHidden|orientation|locale"
+            android:label="能力图谱界面--入口界面"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name="com.iyuba.abilitytest.activity.AbilityMapSubActivity"
+            android:configChanges="keyboardHidden|orientation|locale"
+            android:label="单项能力图谱及获取数据界面"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.iyuba.abilitytest.activity.AbilityTestResultActivity"
+            android:configChanges="keyboardHidden|orientation|locale"
+            android:label="测试结束展示结果"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.iyuba.abilitytest.activity.SpeakAbilityTestActivity"
+            android:configChanges="keyboardHidden|orientation|locale"
+            android:label="口语测试界面"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.iyuba.abilitytest.activity.ShowAnalysisActivity"
+            android:configChanges="keyboardHidden|orientation|locale"
+            android:screenOrientation="portrait" />
+        <activity android:name=".CommentActivity" />
+        <activity android:name=".DownloadActivity" />
+        <activity
+            android:name=".activity.VideoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity android:name=".VipCenterGoldActivity" />
+        <activity android:name=".vip.BuyIyubiActivity" />
+
+
+        <!--非必要的配置信息-->
+        <!--高德地图key-->
+        <!--<meta-data
+            android:name="com.amap.api.v2.apikey"
+            tools:replace="android:value"
+            android:value="816c1670453f5e175e3db23e0ff4ec0b"/>
+        <service android:name="com.amap.api.location.APSService" />-->
+
+        <!--有道广告sdk-->
+        <!--<activity
+            android:name="com.youdao.sdk.common.YouDaoBrowser"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTask"
+            tools:replace="android:configChanges" />
+        <activity
+            android:name="com.youdao.sdk.nativeads.YouDaoInterstitialActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent"
+            tools:replace="android:configChanges" />
+        <activity
+            android:name="com.youdao.sdk.listvideo.YouDaoListVideoActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:hardwareAccelerated="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            tools:replace="android:configChanges" />
+        <service
+            android:name="com.youdao.sdk.common.YouDaoAppService"
+            android:enabled="true" />-->
+
+        <!--友盟-->
+        <!--<meta-data
+            android:name="UMENG_APPKEY"
+            android:value="538d5e0756240beaab073242" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="@string/umeng_channel_normal" />-->
+
+        <!--mqtt-->
+        <!--<service
+            android:name="tv.lycam.mqtt.MqttService"
+            android:exported="false"
+            android:stopWithTask="true" />-->
+
+        <!--mob-->
+        <!--<activity
+            android:name="com.mob.tools.MobUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            android:exported="false">
+
+            &lt;!&ndash; 调用新浪原生SDK，需要注册的回调activity &ndash;&gt;
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>-->
+
+        <!-- QQ分享回调 -->
+        <activity
+            android:name="cn.sharesdk.tencent.qq.ReceiveActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true"
+            android:exported="true"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent1102057305" />
+            </intent-filter>
+        </activity>
+
+        <!--谷歌gms-->
+        <!--<meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />-->
+    </application>
+
+</manifest>

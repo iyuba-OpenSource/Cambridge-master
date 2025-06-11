@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="90dp"
+    android:background="@color/white"
+    android:orientation="horizontal">
+
+    <CheckBox
+        android:id="@+id/is_choose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        />
+
+
+    <ImageView
+        android:id="@+id/iv_basic_headlines"
+        android:layout_width="105dp"
+        android:layout_height="75dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="5dp"
+        android:scaleType="fitXY" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="5dp"
+        android:layout_weight="1"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_basic_headlines_title_cn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/basic_headlines_list_in_title"
+            android:textSize="14sp"
+            tools:text="basic_headlines_title_cn" />
+
+        <TextView
+            android:id="@+id/tv_basic_headlines_title_en"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="4dp"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/basic_headlines_list_in_title"
+            android:textSize="13sp"
+            tools:text="asic_headlines_title_cn" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_basic_headlines_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/basic_headlines_list_in_desc"
+                android:textSize="12sp"
+                tools:text="2016-11-11" />
+
+            <TextView
+                android:id="@+id/tv_basic_headlines_category_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                tools:text=""
+                android:layout_marginLeft="24dp" />
+
+            <ImageView
+                android:id="@+id/iv_basic_headlines_cate"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                tools:src="@drawable/basic_headlines_cate_video" />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

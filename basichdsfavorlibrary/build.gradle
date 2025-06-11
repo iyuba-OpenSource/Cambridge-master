@@ -1,0 +1,57 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    final SUPPORT_LIBRARY_VERSION = "$rootProject.ext.supportLibraryVersion"
+    final RETROFIT_VERSION = "$rootProject.ext.retrofitVersion"
+    final OKHTTP_VERSION = "$rootProject.ext.okhttpVersion"
+    api fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestImplementation('androidx.test.espresso:espresso-core:3.1.0', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    testImplementation 'junit:junit:4.12'
+
+
+    //support库的相关模块
+    compileOnly 'androidx.appcompat:appcompat:1.0.0'
+    compileOnly 'com.google.android.material:material:1.0.0'
+    compileOnly 'androidx.cardview:cardview:1.0.0'
+    compileOnly 'androidx.recyclerview:recyclerview:1.0.0'
+    //retrofit2库的相关模块
+    implementation "com.squareup.retrofit2:retrofit:$RETROFIT_VERSION"
+    implementation "com.squareup.retrofit2:converter-gson:$RETROFIT_VERSION"
+    implementation "com.squareup.retrofit2:adapter-rxjava:$RETROFIT_VERSION"
+    implementation ("com.squareup.retrofit2:converter-simplexml:$RETROFIT_VERSION")
+            {
+                exclude group: 'xpp3', module: 'xpp3'
+                exclude group: 'stax', module: 'stax-api'
+                exclude group: 'stax', module: 'stax'
+            }
+    //okhttp3的相关模块
+    compileOnly "com.squareup.okhttp3:okhttp:$OKHTTP_VERSION"
+    compileOnly "com.squareup.okhttp3:logging-interceptor:$OKHTTP_VERSION"
+    //Glide图片加载
+    compileOnly 'com.github.bumptech.glide:glide:3.8.0'
+    //EventBus
+    compileOnly 'org.greenrobot:eventbus:3.0.0'
+
+    compileOnly 'io.reactivex:rxjava:1.1.0'
+    compileOnly 'io.reactivex:rxandroid:1.1.0'
+}

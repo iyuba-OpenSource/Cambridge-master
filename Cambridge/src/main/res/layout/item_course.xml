@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:baselineAligned="false"
+    android:background="@drawable/microclass_classlist_item_select"
+    android:orientation="horizontal" >
+    
+    <RelativeLayout
+        android:id="@+id/RL_livePack_list_image"
+        android:layout_width="wrap_content"
+        android:layout_height="88dp"
+        android:layout_marginLeft="2dp">
+        
+        <ImageView
+            android:id="@+id/livePack_pic"
+            android:layout_width="110dp"
+            android:layout_height="match_parent"
+			android:layout_centerVertical="true"
+            android:background="@drawable/live_list_item_image"
+            android:scaleType="fitXY" />
+        
+    </RelativeLayout>
+
+    <LinearLayout 
+        android:id="@+id/LL_livePack_content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+		android:layout_marginLeft="12dp"
+        android:orientation="vertical">
+        
+        <RelativeLayout 
+            android:id="@+id/LL_livePack_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/livePack_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/course_name_black"
+                android:text="课程包的标题"
+                android:textSize="15sp" />
+
+        </RelativeLayout>
+        
+        <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginBottom="6dp"
+	        android:layout_marginTop="2dp"
+	        android:gravity="center"
+	        android:orientation="vertical" >
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal">
+				<TextView
+					android:id="@+id/livePackDesc_start_date"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:textColor="@color/course_date_gray"
+					android:text="2016-07-13"
+					android:textSize="11sp" />
+				<TextView
+					android:id="@+id/livePackDesc_date_to"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:textColor="@color/course_date_gray"
+					android:text="至"
+					android:textSize="11sp" />
+				<TextView
+					android:id="@+id/livePackDesc_end_date"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:textColor="@color/course_date_gray"
+					android:text="2016-08-08"
+					android:textSize="11sp" />
+			</LinearLayout>
+
+            
+            <RelativeLayout
+                android:id="@+id/ll_livePack_applyNum_and_price"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+				android:layout_marginTop="2dp"
+                android:layout_marginBottom="0dp">
+                
+                <LinearLayout 
+                    android:id="@+id/ll_livePack_applyNum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView 
+                        android:id="@+id/tv_livePack_applyNum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:layout_gravity="center_vertical"
+                        android:text="22000人"
+                        android:textColor="@color/colorPrimary"
+						android:textSize="12sp"/>
+					<TextView
+						android:id="@+id/tv_livePack_applyNum_tip"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:gravity="center_horizontal"
+						android:layout_gravity="center_vertical"
+						android:text="已报名"
+						android:textColor="@color/course_apply_gray"
+						android:textSize="12sp"/>
+
+                </LinearLayout>
+
+				<LinearLayout
+					android:id="@+id/ll_livePack_price"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:orientation="horizontal"
+					android:layout_below="@id/ll_livePack_applyNum"
+					android:layout_marginRight="5dp"
+					android:layout_alignParentRight="true">
+
+					<TextView
+						android:id="@+id/tv_livePack_oldprice"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:textColor="@color/course_oldprice_gray"
+						android:textSize="13sp"
+						android:text="299"/>
+
+					<TextView
+						android:id="@+id/tv_livePack_newprice"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginLeft="3dp"
+						android:textColor="@color/colorPrimary"
+						android:textSize="16sp"
+						android:text="199"/>
+				</LinearLayout>
+
+				<TextView
+					android:id="@+id/tv_livepack_type"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="CET4"
+					android:layout_below="@id/ll_livePack_applyNum"
+					android:layout_alignBottom="@id/ll_livePack_price"
+					android:gravity="bottom"
+					android:layout_alignParentLeft="true"
+					android:textSize="11sp"
+					android:textColor="@color/course_type_gray"/>
+            </RelativeLayout>
+    	</LinearLayout>
+        
+    </LinearLayout>
+
+</LinearLayout>

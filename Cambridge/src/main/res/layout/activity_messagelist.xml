@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@mipmap/background"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/toolbar"
+        android:layout_width="fill_parent"
+        android:layout_height="?actionBarSize"
+        android:background="?colorPrimary"
+        android:minHeight="?actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:navigationIcon="?homeAsUpIndicator"
+        app:contentInsetStart="0dp"
+        app:popupTheme="?actionBarPopupTheme" >
+
+
+        <TextView
+            android:id="@+id/play_title_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:shadowColor="#ff000000"
+            android:shadowDx="3.0"
+            android:shadowDy="3.0"
+            android:shadowRadius="3.0"
+            android:text="消息中心"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#ffffff" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- <RelativeLayout
+        android:id="@+id/message_title"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/titlebar_lightgray_bg" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal" >
+            <Button
+            android:id="@+id/button_back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/back_button" />
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="35.7dip"
+                android:layout_gravity="center"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dip" >
+
+                <Button
+                    android:id="@+id/message_letter"
+                    android:layout_width="37dip"
+                    android:layout_height="33dip"
+                    android:background="@drawable/message_letter"
+                    android:gravity="center" />
+
+                <Button
+                    android:id="@+id/message_letter_press"
+                    android:layout_width="80dp"
+                    android:layout_height="33dip"
+                    android:layout_marginBottom="1dip"
+                    android:background="@drawable/button_shape"
+                    android:text="@string/message_title"
+                    android:gravity="center" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="35.7dip"
+               android:layout_gravity="center_vertical"
+                android:layout_marginRight="30dip" >
+
+                <Button
+                    android:id="@+id/message_reply"
+                    android:layout_width="37dip"
+                    android:layout_height="33dip"
+                    android:layout_marginBottom="1dip"
+                    android:background="@drawable/message_reply"
+                    android:gravity="center" />
+
+                <Button
+                    android:id="@+id/message_reply_press"
+                    android:layout_width="80dip"
+                    android:layout_height="33dip"
+                    android:layout_marginBottom="1dip"
+                    android:background="@drawable/button_shape"
+                    android:text="@string/social_attention"
+                    />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="40dip"
+                android:layout_height="35.7dip" >
+
+                <Button
+                    android:id="@+id/message_notification"
+                    android:layout_width="37dip"
+                    android:layout_height="33dip"
+                    android:layout_marginBottom="1dip"
+                    android:background="@drawable/message_notification"
+                    android:gravity="center" />
+
+                <Button
+                    android:id="@+id/message_notification_press"
+                    android:layout_width="37dip"
+                    android:layout_height="33dip"
+                    android:layout_marginBottom="1dip"
+                    android:background="@drawable/message_notification_press"
+                    android:gravity="center" />
+            </FrameLayout>
+        </LinearLayout>
+    </RelativeLayout> -->
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="wrap_content"
+        android:layout_height="0dip"
+        android:layout_weight="1" />
+
+</LinearLayout>
